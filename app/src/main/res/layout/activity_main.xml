@@ -10,51 +10,52 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/Hello"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:text="Hello World!"></TextView>
+        android:text="Hello User "></TextView>
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/HelloWorld"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView1"
+        android:layout_below="@+id/Hello"
         android:layout_margin="10dp"
-        android:text="Hello World!"></TextView>
+        android:text="This is just a teste Hello Wold!"></TextView>
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/IPVCname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView2"
+        android:layout_below="@+id/HelloWorld"
         android:layout_margin="10dp"
-        android:text="Hello World!"></TextView>
+        android:text="Institute Politecnice Vina do Castelo "></TextView>
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/ESTGname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView3"
+        android:layout_below="@+id/IPVCname"
         android:layout_margin="10dp"
-        android:text="Hello World!"></TextView>
+        android:text="Escola Superior de Tecnologia de Gestão "></TextView>
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/ERSCname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView4"
+        android:layout_below="@+id/ESTGname"
         android:layout_margin="10dp"
-        android:text="Hello World!"></TextView>
+        android:text="Engenharia de Redes e sistemas de Computadores "></TextView>
 
+    <!--1ºEdit Text -->
     <EditText
-        android:id="@+id/editText1"
+        android:id="@+id/nome_school"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView5"
+        android:layout_below="@+id/ERSCname"
         android:ems="12"
-        android:hint="Diz algo aqui "
+        android:hint="Qual é o nome da tua escola?"
         android:inputType="text"></EditText>
 
     <Button
@@ -63,8 +64,64 @@
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:text="Button1"
-        android:layout_below="@+id/textView5"
-        android:layout_alignTop="@id/editText1">
+        android:layout_below="@+id/ERSCname"
+        android:layout_alignTop="@id/nome_school"
+        android:onClick="Button1Click">
+    </Button>
+    <!--2ºEdit Text -->
+    <EditText
+        android:id="@+id/nome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nome_school"
+        android:ems="12"
+        android:hint="Como te chamas?"
+        android:inputType="text"
+        ></EditText>
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="Button2"
+        android:layout_below="@+id/button1"
+        android:onClick="Button2Click">
+    </Button>
+    <!--3ºEdit Text -->
+    <EditText
+        android:id="@+id/anos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nome"
+        android:ems="12"
+        android:hint="Quantos anos têns?"
+        android:inputType="number"></EditText>
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="Button3"
+        android:layout_below="@+id/button2"
+        android:onClick="Button3Click">
+    </Button>
+    <!--4ºEdit Text -->
+    <EditText
+        android:id="@+id/numero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/anos"
+        android:ems="14"
+        android:hint="Qual é o teu numero de estudante?"
+        android:inputType="number"></EditText>
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="Button3"
+        android:layout_below="@+id/button3"
+        android:onClick="Button4Click">
     </Button>
 
     <LinearLayout
@@ -74,23 +131,33 @@
         android:layout_alignParentBottom="true">
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/button5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_margin="10dp"
-            android:text="Button1"
-            android:onClick="Button1Click">
+            android:text="Go to the Second Activity"
+            android:onClick="ClickSecond"
+            >
         </Button>
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/button6"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_margin="10dp"
-            android:text="Button2"
-            android:onClick="Button2Click">
+            android:text="Go to the Third Activity"
+            android:onClick="ClickThird">
+        </Button>
+        <Button
+            android:id="@+id/button7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:text="Go to the Fourth Activity"
+            android:onClick="ClickFourth">
         </Button>
 
     </LinearLayout>
