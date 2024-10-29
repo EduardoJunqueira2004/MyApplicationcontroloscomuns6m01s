@@ -123,6 +123,16 @@
         android:layout_below="@+id/button3"
         android:onClick="Button4Click">
     </Button>
+    <!--Image  -->
+    <TextView
+        android:id="@+id/icone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/numero"
+        android:layout_toLeftOf="@id/button3"
+        android:layout_margin="50dp"
+        android:drawableBottom="@drawable/ic_launcher_foreground"></TextView>
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -159,6 +169,7 @@
             android:text="Go to the Fourth Activity"
             android:onClick="ClickFourth">
         </Button>
+
 
     </LinearLayout>
 

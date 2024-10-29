@@ -17,9 +17,14 @@ class MainActivity2 : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        val name = intent.getStringExtra(MainActivity.PARAM_NAME)
-        findViewById<TextView>(R.id.Hello)
-        t.text =str
+
+
+        //Ir ao itent e buscar o prâmetro que passamos de uma mensagem neste caso o nome
+        val message = intent.getStringExtra(MainActivity.PARAM_NAME)
+        //Alterar o texto do textView para a mensagem que passamos o text
+        val textView = findViewById<TextView>(R.id.Activity2).apply {
+            text = message
+        }
     }
 
 }

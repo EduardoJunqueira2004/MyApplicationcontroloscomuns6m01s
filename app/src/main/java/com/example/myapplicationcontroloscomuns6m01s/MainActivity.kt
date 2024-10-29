@@ -34,10 +34,10 @@ class MainActivity : AppCompatActivity() {
     }
     fun Button2Click(view: View)
     {
-        var edit1 = findViewById<EditText>(R.id.nome)
-        Toast.makeText(this, edit1.text, Toast.LENGTH_SHORT).show()
-        //Altera o textView do default para o texto do edit1
-        findViewById<TextView>(R.id.HelloWorld).setText(edit1.text)
+        var edit2 = findViewById<EditText>(R.id.nome)
+        Toast.makeText(this, edit2.text, Toast.LENGTH_SHORT).show()
+        //Altera o textView do default para o texto do edit2
+        findViewById<TextView>(R.id.HelloWorld).setText(edit2.text)
 
     }
     fun Button3Click(view: View)
@@ -50,20 +50,19 @@ class MainActivity : AppCompatActivity() {
     }
     fun Button4Click(view: View)
     {
-        var edit1 = findViewById<EditText>(R.id.numero)
-        Toast.makeText(this, edit1.text, Toast.LENGTH_SHORT).show()
-        //Altera o textView do default para o texto do edit1
-        findViewById<TextView>(R.id.ESTGname).setText(edit1.text)
+        var edit3 = findViewById<EditText>(R.id.numero)
+        Toast.makeText(this, edit3.text, Toast.LENGTH_SHORT).show()
+        //Altera o textView do default para o texto do edit3
+        findViewById<TextView>(R.id.ESTGname).setText(edit3.text)
 
     }
 
 // Eventos para clique no botão e  Opening a new intent on button click activity new activity
     fun ClickSecond(view: View)
     {
-        val intent = Intent(this, MainActivity2::class.java)
-        intent.putExtra(MainActivity.PARAM_NAME,
-        findViewById<EditText>(R.id.nome_school).text.toString())
-
+        var edit1 = findViewById<EditText>(R.id.nome_school) //Vai buscar o que está na minha caixa de texto
+        val intent = Intent(this, MainActivity2::class.java)//intent de abrir a atividade2 manifestação de fazer uma determinada ação que neste caso é fazer uma nova atividade
+        intent.putExtra(MainActivity.PARAM_NAME,edit1.text.toString())//Passar o valor do edit1 para a atividade2
         startActivity(intent)
 
     }
@@ -71,28 +70,26 @@ class MainActivity : AppCompatActivity() {
 
     fun ClickThird(view: View)
     {
-        val intent = Intent(this, MainActivity3::class.java)
-        intent.putExtra(MainActivity.PARAM_NAME1,
-        findViewById<EditText>(R.id.nome_school).text.toString())
-
+        var edit2 = findViewById<EditText>(R.id.nome) //Vai buscar o que está na minha caixa de texto
+        val intent = Intent(this, MainActivity3::class.java)//intent de abrir a atividade2 manifestação de fazer uma determinada ação que neste caso é fazer uma nova atividade
+        intent.putExtra(MainActivity.PARAM_NAME1,edit2.text.toString())//Passar o valor do edit1 para a atividade2
         startActivity(intent)
     }
 
 
     fun ClickFourth(view: View)
     {
-        val intent = Intent(this, MainActivity4::class.java)
-        intent.putExtra(MainActivity.PARAM_NAME2,
-        findViewById<EditText>(R.id.nome_school).text.toString())
-
+        var edit3 = findViewById<EditText>(R.id.numero) //Vai buscar o que está na minha caixa de texto
+        val intent = Intent(this, MainActivity4::class.java)//intent de abrir a atividade2 manifestação de fazer uma determinada ação que neste caso é fazer uma nova atividade
+        intent.putExtra(MainActivity.PARAM_NAME2,edit3.text.toString())//Passar o valor do edit1 para a atividade2
         startActivity(intent)
     }
-    //Compain Object
+    //Compain Object obrigatório para defenir as constantes PARAM_NAME, PARAM_NAME1, PARAM_NAME2
     companion object
     {
-        const val PARAM_NAME = "name"
-        const val PARAM_NAME1 = "name1"
-        const val PARAM_NAME2 = "name2"
+        const val PARAM_NAME = "nome_school"
+        const val PARAM_NAME1 = "nome"
+        const val PARAM_NAME2 = "numero"
     }
 
 }
